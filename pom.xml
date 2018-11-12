@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>bedrockrmval</groupId>
+  <groupId>bedrockrmval.Main.Main.Main</groupId>
   <artifactId>bedrockRemoval</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   
@@ -31,7 +31,7 @@
     </dependencies>
         
   <build>
-    <sourceDirectory>bedrockRemoval.src.main.java</sourceDirectory>
+    <!--<sourceDirectory>bedrockRemoval.src.main.java</sourceDirectory>-->
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

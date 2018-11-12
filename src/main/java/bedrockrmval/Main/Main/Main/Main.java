@@ -1,8 +1,9 @@
-package main.java.bedrockrmval.Main.Main.Main;
+package bedrockrmval.Main.Main.Main;
 
-import Events.CloseEvent;
-import Events.OnPlace;
-import Events.OpenEvent;
+import bedrockrmval.Main.Main.Main.Events.CloseEvent;
+import bedrockrmval.Main.Main.Main.Events.OnPlace;
+import bedrockrmval.Main.Main.Main.Events.OpenEvent;
+
 import cn.nukkit.plugin.PluginBase;
 
 public class Main extends PluginBase {

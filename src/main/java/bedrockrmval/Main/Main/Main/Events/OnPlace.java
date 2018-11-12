@@ -1,22 +1,26 @@
-package main.java.bedrockrmval.Events;
+package bedrockrmval.Main.Main.Main.Events;
 
 import cn.nukkit.Player;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.EventPriority;
 import cn.nukkit.event.Listener;
-import cn.nukkit.event.inventory.InventoryCloseEvent;
+import cn.nukkit.event.block.BlockPlaceEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.utils.TextFormat;
 
-public class CloseEvent implements Listener {
+public class OnPlace implements Listener {
+
+  // NOT WORKING {WARNING} NOT WORKING
 
   @EventHandler(priority = EventPriority.LOW, ignoreCancelled = false)
-  public void event(InventoryCloseEvent event) { // EVENT
+  public void event(BlockPlaceEvent event) { // EVENT
+
     Player player = event.getPlayer();
     if (!(player.isOp())) {
       Item bedrock = new Item(Item.BEDROCK);
-      if (player.getInventory().contains(bedrock)) {
+      if (event.getBlock().equals(Item.BEDROCK)) {
         player.getInventory().remove(bedrock);
+        event.setCancelled(true);
         player.sendMessage(TextFormat.DARK_RED + "illegal bedrock removed");
       }
     }
