@@ -10,15 +10,16 @@ import cn.nukkit.utils.TextFormat;
 
 public class OpenEvent implements Listener {
 
-  @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = false)
+  @EventHandler(priority = EventPriority.LOW, ignoreCancelled = false)
   public void event(InventoryOpenEvent event) { // EVENT
 
-    Player player = (Player) event.getPlayer();
-
-    Item bedrock = new Item(Item.BEDROCK);
-    if (player.getInventory().contains(bedrock)) {
-      player.getInventory().remove(bedrock);
-      player.sendMessage(TextFormat.DARK_RED + "illegal bedrock removed");
+    Player player = event.getPlayer();
+    if (!(player.isOp())) {
+      Item bedrock = new Item(Item.BEDROCK);
+      if (player.getInventory().contains(bedrock)) {
+        player.getInventory().remove(bedrock);
+        player.sendMessage(TextFormat.DARK_RED + "illegal bedrock removed");
+      }
     }
   }
 }

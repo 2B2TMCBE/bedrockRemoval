@@ -12,16 +12,17 @@ public class OnPlace implements Listener {
 
   // NOT WORKING {WARNING} NOT WORKING.
 
-  @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = false)
+  @EventHandler(priority = EventPriority.LOW, ignoreCancelled = false)
   public void event(BlockPlaceEvent event) { // EVENT
 
-    Player player = (Player) event.getPlayer();
-
-    Item bedrock = new Item(Item.BEDROCK);
-    if (event.getBlock().equals(Item.BEDROCK)) {
-      player.getInventory().remove(bedrock);
-      event.setCancelled(true);
-      player.sendMessage(TextFormat.DARK_RED + "illegal bedrock removed");
+    Player player = event.getPlayer();
+    if (!(player.isOp())) {
+      Item bedrock = new Item(Item.BEDROCK);
+      if (event.getBlock().equals(Item.BEDROCK)) {
+        player.getInventory().remove(bedrock);
+        event.setCancelled(true);
+        player.sendMessage(TextFormat.DARK_RED + "illegal bedrock removed");
+      }
     }
   }
 }
