@@ -10,7 +10,7 @@ import cn.nukkit.utils.TextFormat;
 
 public class OnPlace implements Listener {
 
-  // NOT WORKING {WARNING} NOT WORKING.
+  // NOT WORKING {WARNING} NOT WORKING
 
   @EventHandler(priority = EventPriority.LOW, ignoreCancelled = false)
   public void event(BlockPlaceEvent event) { // EVENT
