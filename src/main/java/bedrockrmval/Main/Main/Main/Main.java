@@ -1,3 +1,7 @@
+/*
+ *  Copyright (c) 2B2TMCBE™ - All Rights Reserved
+ *  Licensed under the MIT License. See LICENSE in the project root for more information
+ */
 package bedrockrmval.Main.Main.Main;
 
 import bedrockrmval.Main.Main.Main.Events.CloseEvent;
