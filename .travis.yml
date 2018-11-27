@@ -14,4 +14,4 @@ deploy:
   overwrite: true
   on:
     repo: 2B2TMCBE/bedrockRemoval
-    tags: true
+#   tags: true
